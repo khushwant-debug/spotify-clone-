@@ -1,0 +1,163 @@
+:root {
+  --bg-color: #000; /* Spotify black background */
+  --form-bg: rgba(255, 255, 255, 0.05);
+  --text-color: #fff;
+  --accent: #1DB954; /* Spotify Green */
+  --input-bg: #121212;
+  --label-color: #aaa;
+  --shadow: rgba(0, 0, 0, 0.6);
+}
+
+body.light {
+  --bg-color: #f4f4f4;
+  --form-bg: rgba(255, 255, 255, 0.9);
+  --text-color: #000;
+  --accent: #1DB954;
+  --input-bg: #fff;
+  --label-color: #555;
+  --shadow: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color);
+  transition: background 0.3s ease;
+}
+
+/* Dark mode toggle */
+.toggle-theme {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.toggle-theme button {
+  background: var(--form-bg);
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--text-color);
+  backdrop-filter: blur(5px);
+}
+
+.login-container {
+  background: var(--form-bg);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px var(--shadow);
+  width: 350px;
+  animation: slideIn 0.8s ease forwards;
+}
+
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 24px;
+  color: var(--accent);
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 40px 12px 12px;
+  border: none;
+  border-radius: 6px;
+  background: var(--input-bg);
+  color: var(--text-color);
+  font-size: 15px;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: var(--label-color);
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown):valid + label {
+  top: -10px;
+  left: 8px;
+  font-size: 12px;
+  background: var(--form-bg);
+  padding: 0 4px;
+  color: var(--accent);
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 20px;
+  color: var(--label-color);
+}
+
+.options a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background: #1aa34a;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 400px) {
+  .login-container {
+    width: 90%;
+  }
+}

@@ -1,0 +1,259 @@
+<!--
+  Spotify Clone HTML File with Comments
+  This file structures the web page including the navigation bar, main content, playlists, and footer
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Linking external stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+
+    <!-- Favicon icon for tab -->
+    <link
+      rel="icon"
+      type="image/webp"
+      href="assets/Spotify_logo_without_text.webp"
+    />
+
+    <!-- Page Title -->
+    <title>spotify.com</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <!-- Logo section -->
+      <div class="navbar__logo">
+        <img src="assets/Spotify_logo_without_text.webp" alt="Spotify Logo" />
+        <span>Spotify</span>
+      </div>
+
+      <!-- Search form -->
+      <form class="navbar__search" action="#" method="get" autocomplete="off">
+        <input
+          type="text"
+          placeholder="What do you want to play?"
+          name="q"
+          class="navbar__search-input"
+        />
+        <button type="submit" class="navbar__search-btn">
+          <i class="fa-brands fa-searchengin"></i>
+        </button>
+      </form>
+
+      <!-- Navigation links -->
+      <ul class="navbar__links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Your Library</a></li>
+        <li class="divider">|</li>
+      </ul>
+
+      <!-- Signup and login actions -->
+      <div class="navbar__actions">
+        <a href="signup.html" class="signup">Sign up</a>
+        <a href="login.html" class="login">Log in</a>
+      </div>
+    </nav>
+
+    <!-- Main content container -->
+    <div class="container">
+      <!-- Left Sidebar -->
+      <div class="left border bg-black">
+        <ul>
+          <li>
+            <i class="fa-solid fa-house"></i>
+            <p>Home</p>
+          </li>
+          <li>
+            <i class="fa-solid fa-book"></i>
+            <p>Your Library</p>
+          </li>
+        </ul>
+
+        <!-- Library category buttons -->
+        <div class="lib_btn">
+          <a><li>Playlist</li></a>
+          <a><li>Artist</li></a>
+          <a><li>Albums</li></a>
+          <a><li>Podcast & shows</li></a>
+        </div>
+        <h4 class="yoursong">Your Songs</h4>
+        <div class="library-list">
+          <ul id="librarySongsList">
+            <!-- Songs list will load here -->
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right Content Area -->
+      <div class="right border bg-black">
+        <!-- Top filters -->
+        <div class="right-top">
+          <ol>
+            <li>All</li>
+            <li>Music</li>
+            <li>Podcast</li>
+          </ol>
+        </div>
+
+        <!-- Scrollable playlist content -->
+        <div class="scroll-content">
+          <div class="spotify-playlists">
+            <h1>Filmy Hangover</h1>
+            <div class="card-container" id="playlist-filmy"></div>
+          </div>
+
+          <div class="spotify-playlists">
+            <h1>Romantic Hits</h1>
+            <div class="card-container" id="playlist-romantic"></div>
+          </div>
+
+          <!-- Footer Section -->
+          <div class="footer">
+            <!-- Footer Columns -->
+            <div class="footer-section">
+              <h3>Company</h3>
+              <ul>
+                <li>
+                  <a href="https://www.spotify.com/in-en/about-us/contact/"
+                    >About</a
+                  >
+                </li>
+                <li><a href="https://www.lifeatspotify.com/">Jobs</a></li>
+                <li>
+                  <a href="https://newsroom.spotify.com/">For the Record</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Communities</h3>
+              <ul>
+                <li><a href="https://artists.spotify.com/">For Artists</a></li>
+                <li><a href="https://developer.spotify.com/">Developers</a></li>
+                <li><a href="https://ads.spotify.com/">Advertising</a></li>
+                <li><a href="https://investors.spotify.com/">Investors</a></li>
+                <li><a href="https://spotifyforvendors.com/">Vendors</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Useful links</h3>
+              <ul>
+                <li><a href="https://support.spotify.com/">Support</a></li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/download/"
+                    >Free Mobile App</a
+                  >
+                </li>
+                <li><a href="/popular-in/in">Popular by Country</a></li>
+              </ul>
+            </div>
+
+            <div class="footer-section">
+              <h3>Spotify Plans</h3>
+              <ul>
+                <li>
+                  <a href="https://www.spotify.com/in-en/premium/"
+                    >Premium Individual</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/duo/">Premium Duo</a>
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/family/"
+                    >Premium Family</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/student/"
+                    >Premium Student</a
+                  >
+                </li>
+                <li>
+                  <a href="https://www.spotify.com/in-en/free/">Spotify Free</a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Social Media Links -->
+            <div class="footer-section">
+              <a href="https://www.instagram.com/spotify/" class="social-link">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://twitter.com/spotify" class="social-link">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+              <a href="https://www.facebook.com/spotify" class="social-link">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Legal Links at Bottom -->
+          <div class="legal-footer">
+            <a href="https://www.spotify.com/in-en/legal/"
+              ><span>Legal</span></a
+            >
+            <a href="https://www.spotify.com/in-en/safetyandprivacy/"
+              ><span>Safety & Privacy Center</span></a
+            >
+            <a href="https://www.spotify.com/in-en/legal/privacy-policy/"
+              ><span>Privacy Policy</span></a
+            >
+            <a href="https://www.spotify.com/in-en/legal/cookies-policy/"
+              ><span>Cookies</span></a
+            >
+            <a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+              ><span>About Ads</span></a
+            >
+            <a href="https://www.spotify.com/in-en/accessibility/"
+              ><span>Accessibility</span></a
+            >
+            <p>© 2025 Spotify AB</p>
+          </div>
+
+          <!-- Music Playbar -->
+          <div class="playbar">
+            <div class="play1">
+            <div class="songinfo">Not Playing</div>
+            <div class="controls">
+              <i class="fa-solid fa-backward" id="prevBtn"></i>
+              <i class="fa-solid fa-play" id="playPauseBtn"></i>
+              <i class="fa-solid fa-forward" id="nextBtn"></i>
+            </div>
+            <div class="songtime">
+            </div>
+            
+            <input
+            type="range"
+            id="volume"
+            min="0"
+            max="1"
+            step="0.01"
+            value="1"
+            />
+            </div>
+
+            <div class="play2">
+              <span id="currentTime">0:00</span>
+              <input type="range" id="seekBar" value="0" />
+              <span id="totalTime">0:00</span>
+            </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Linking external JS script -->
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spotify Signup</title>
+  <link rel="stylesheet" href="login.css" />
+</head>
+<body>
+  <div class="toggle-theme">
+    <button onclick="toggleTheme()">🌓</button>
+  </div>
+
+  <div class="login-container">
+    <form class="login-form" onsubmit="return handleSignup(event)">
+      <!-- Spotify Logo -->
+      <div style="text-align: center; margin-bottom: 15px;">
+        <img src="assets/Spotify_logo_without_text.webp" alt="Spotify" width="120" />
+      </div>
+
+      <h2>Create Your Account</h2>
+
+      <div class="input-group">
+        <input type="text" id="username" required />
+        <label for="username">Username</label>
+      </div>
+
+      <div class="input-group">
+        <input type="email" id="email" required />
+        <label for="email">Email</label>
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="signup-password" required />
+        <label for="signup-password">Password</label>
+        <span class="toggle-password" onclick="toggleSignupPassword()">👁️</span>
+      </div>
+
+      <div class="options">
+        <label><input type="checkbox" id="agree" required /> I agree to the <a href="#">terms</a></label>
+      </div>
+
+      <button type="submit">Sign Up</button>
+
+      <p style="text-align: center; margin-top: 15px; font-size: 14px;">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
