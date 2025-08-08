@@ -29,6 +29,7 @@
       { name: "HIGHWAY", filePath: "assets/songs/song25.mp3", img: "assets/playlist25.jpg" },
       { name: "CHURAKE", filePath: "assets/songs/song26.mp3", img: "assets/playlist26.jpg" },
       { name: "AKHIYAN", filePath: "assets/songs/song27.mp3", img: "assets/playlist27.webp" },
+      { name: "tollywood 2", filePath: "assets/songs/tollywood.mp3", img: "assets/tollywood.webp" },
     ];
 
     let currentSongIndex = 0;
